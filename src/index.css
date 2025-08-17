@@ -1,0 +1,55 @@
+@import "tailwindcss"; 
+
+html {
+    scroll-padding-top: 5rem;
+}
+
+@theme {
+  /* Minhas cores */
+  --color-primary: #1a365d;
+  --color-secondary: #2c5282;
+  --color-accent: #ecc94b;
+
+  /* Cores da identidade visual */
+  --color-brand-yellow: #fec800;
+  --color-brand-red: #e30613;
+  --color-brand-black: #000000;
+  --color-brand-gray-light: #d4d4d4;
+  --color-brand-gray: #8a8989;
+  --color-brand-gray-dark: #706f6f;
+}
+
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
