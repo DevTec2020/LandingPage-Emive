@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 
-import ViniciusImg from "./assets/Vinicius.jpg"
+import LogoEmive from "./assets/LogoEmive.png"
+import SuporteImg from "./assets/Suporte.png"
+
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faBuilding, faEnvelope, faIndustry, faShieldAlt, faStore } from "@fortawesome/free-solid-svg-icons";
-import { faCircleCheck as farCircleCheck } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowAltCircleRight, faCircleCheck as farCircleCheck } from "@fortawesome/free-regular-svg-icons";
 
 function App() {
     const [scroll, setScroll] = useState(false);
@@ -31,48 +33,53 @@ function App() {
         </a>
     </div>
 
+    {/* Top Bar */}
+    <div className="hidden sm:flex justify-end items-center gap-10 bg-gray-800">
+        <div className="flex space-x-4">
+            <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" className="text-gray-400 hover:text-white flex items-center">
+                <FontAwesomeIcon icon={faWhatsapp} className="mr-1 text-xl" /> (21) 96740-6645
+            </a>
+
+            <a href="mailto:teste@teste.com" className="text-gray-400 hover:text-white flex items-center">
+                <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-xl" />
+                <span>contato@teste.com.br</span>
+            </a>
+        </div>
+
+        <div className="flex space-x-3 me-5">
+            <a href="https://www.instagram.com/viniciushafner.franqueado" target="_blank" className="text-gray-400 hover:text-white text-xl transition"><FontAwesomeIcon icon={faInstagram} className="text-xl" /></a>
+            <a href="https://www.linkedin.com/in/vinicius-hafner-segurancaeletronica" target="_blank" className="text-gray-400 hover:text-white text-xl transition"><FontAwesomeIcon icon={faLinkedin} className="text-xl" /></a>
+            <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" className="text-gray-400 hover:text-white text-xl transition"><FontAwesomeIcon icon={faWhatsapp} className="text-xl" /></a>
+        </div>
+    </div>
+
     {/* Header/Top Bar/Navbar */}
-    <header className={`fixed w-full top-0 z-50 shadow-md transition-all duration-300 ${scroll ? "bg-white/80 backdrop-blur-md text-primary" : " bg-transparent text-white"}`}>
-        {/* Top Bar */}
-        <div className="hidden sm:flex justify-end items-center gap-10 bg-gray-800">
-            <div className="flex space-x-4">
-                <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" className="text-gray-400 hover:text-white flex items-center">
-                    <FontAwesomeIcon icon={faWhatsapp} className="mr-1 text-xl" /> (21) 96740-6645
-                </a>
-
-                <a href="mailto:teste@teste.com" className="text-gray-400 hover:text-white flex items-center">
-                    <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-xl" />
-                    <span>contato@teste.com.br</span>
-                </a>
-            </div>
-
-            <div className="flex space-x-3 me-5">
-                <a href="https://www.instagram.com/viniciushafner.franqueado" target="_blank" className="text-gray-400 hover:text-white text-xl transition"><FontAwesomeIcon icon={faInstagram} className="text-xl" /></a>
-                <a href="https://www.linkedin.com/in/vinicius-hafner-segurancaeletronica" target="_blank" className="text-gray-400 hover:text-white text-xl transition"><FontAwesomeIcon icon={faLinkedin} className="text-xl" /></a>
-                <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" className="text-gray-400 hover:text-white text-xl transition"><FontAwesomeIcon icon={faWhatsapp} className="text-xl" /></a>
+    <header className="fixed mt-7 top-0 left-0 w-full z-50">
+        <div className="container flex justify-between items-center mx-auto rounded-full shadow-md p-2 bg-black/50 backdrop-blur-md text-white">
+            {/* Navbar */}
+            <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+                <div>
+                    <a href="#" className="flex items-center space-x-2">
+                        <img src={LogoEmive} alt="Logo-Emive" className="h-14" />
+                    </a>
+                </div>
+                
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center space-x-8 font-bold">
+                    <a href="#home" className="hover:text-brand-yellow transition">Início</a>
+                    <a href="#protecao" className="hover:text-brand-yellow transition">Proteção</a>
+                    <a href="#depoimentos" className="hover:text-brand-yellow transition">Depoimentos</a>
+                    <a href="#contato" className="bg-brand-yellow text-primary hover:bg-white py-3 px-5 rounded-full transition duration-300">
+                        <span>Fale conosco</span>
+                        <FontAwesomeIcon icon={faArrowRight} className="ml-2"/>
+                    </a>
+                </nav>
+                <button className="md:hidden text-xl">
+                    <i className="fas fa-bars"></i>
+                </button>
             </div>
         </div>
 
-        {/* Navbar */}
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div>
-                <a href="#" className="flex items-center space-x-2">
-                    <FontAwesomeIcon icon={faShieldAlt} className="text-brand-yellow text-2xl"/>
-                    <span className="text-xl font-bold">ViníciusHafner</span>
-                </a>
-            </div>
-            
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8 font-bold">
-                <a href="#home" className="hover:text-brand-yellow transition">Início</a>
-                <a href="#protecao" className="hover:text-brand-yellow transition">Proteção</a>
-                <a href="#depoimentos" className="hover:text-brand-yellow transition">Depoimentos</a>
-                <a href="#contato" className="bg-brand-yellow text-primary border-2 border-brand-yellow py-1 px-5 rounded-full transition duration-300">Contato</a>
-            </nav>
-            <button className="md:hidden text-xl">
-                <i className="fas fa-bars"></i>
-            </button>
-        </div>
     </header>
 
     {/* Section 1: Hero (Chamativa) */}
@@ -94,7 +101,7 @@ function App() {
             
             <div className="flex flex-col md:flex-row gap-12 mb-16">
                 <div className="md:w-1/2">
-                    <img src={ViniciusImg} 
+                    <img src={SuporteImg} 
                          alt="Nosso Especialista" className="w-full h-full rounded-lg shadow-lg border-4 border-brand-yellow"/>
                 </div>
                 <div className="md:w-1/2 font-semibold">
