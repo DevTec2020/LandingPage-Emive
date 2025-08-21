@@ -2,6 +2,28 @@
 
 html {
     scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'DinPro';
+    src: url('./assets/fonts/dinpro_light.otf') format('opentype');
+    font-weight: 300; /* Light */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DinPro';
+    src: url('./assets/fonts/dinpro_regular.otf') format('opentype');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DinPro';
+    src: url('./assets/fonts/dinpro_bold.otf') format('opentype');
+    font-weight: 700; /* Bold */
+    font-style: normal;
 }
 
 @theme {
@@ -17,10 +39,12 @@ html {
   --color-brand-gray-light: #d4d4d4;
   --color-brand-gray: #8a8989;
   --color-brand-gray-dark: #706f6f;
+
+  --font-din:['DinPro', 'sans-serif'];
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1607128849509-bdccb1b58d09?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
     background-position: center;
 }
