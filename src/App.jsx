@@ -336,56 +336,78 @@ function App() {
     </section>
 
     {/* Footer */}
-    <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <div className="flex items-center space-x-2 mb-4">
-                        <i className="fas fa-shield-alt text-accent text-2xl"></i>
-                        <span className="text-xl font-bold">SecureTech</span>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-shield-alt text-gray-900 text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">MVX CONSULTORIA</span>
                     </div>
-                    <p className="text-gray-400">Soluções completas em segurança eletrônica para residências e comércios.</p>
+                    <p class="text-gray-400 max-w-xs">Soluções completas em segurança eletrônica para residências e comércios.</p>
                 </div>
-                <div>
-                    <h3 className="text-lg font-bold mb-4">Links Rápidos</h3>
-                    <ul className="space-y-2">
-                        <li><a href="#home" className="text-gray-400 hover:text-white transition">Início</a></li>
-                        <li><a href="#protecao" className="text-gray-400 hover:text-white transition">Soluções</a></li>
-                        <li><a href="#depoimentos" className="text-gray-400 hover:text-white transition">Depoimentos</a></li>
-                        <li><a href="#contato" className="text-gray-400 hover:text-white transition">Contato</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="text-lg font-bold mb-4">Produtos</h3>
-                    <ul className="space-y-2">
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Câmeras de Segurança</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Alarmes</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Cercas Elétricas</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition">Monitoramento</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 className="text-lg font-bold mb-4">Redes Sociais</h3>
-                    <div className="flex space-x-4">
-                        <a href="#" className="text-gray-400 hover:text-white text-xl transition"><i className="fab fa-facebook"></i></a>
-                        <a href="#" className="text-gray-400 hover:text-white text-xl transition"><i className="fab fa-instagram"></i></a>
-                        <a href="#" className="text-gray-400 hover:text-white text-xl transition"><i className="fab fa-linkedin"></i></a>
-                        <a href="#" className="text-gray-400 hover:text-white text-xl transition"><i className="fab fa-youtube"></i></a>
+                
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition">Início</a></li>
+                            <li><a href="#products" class="text-gray-400 hover:text-white transition">Soluções</a></li>
+                            <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Clientes</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                        </ul>
                     </div>
-                    <div className="mt-4">
-                        <a href="https://wa.me/5511999999999" className="text-gray-400 hover:text-white flex items-center">
-                            <i className="fab fa-whatsapp mr-2 text-green-500"></i> (11) 99999-9999
-                        </a>
+                    
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Contato</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-2 text-sm text-accent"></i>
+                                <span class="text-gray-400">21 96740-6645</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2 text-sm text-accent"></i>
+                                <span class="text-gray-400">contato@mvxconsultoria.com.br</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-sm font-semibold uppercase tracking-wider mb-4">Redes Sociais</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/5521967406645" target="_blank" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2023 SecureTech. Todos os direitos reservados.</p>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800">
+                <div class="md:flex md:items-center md:justify-between">
+                    <div class="text-center md:text-left">
+                        <p class="text-gray-400 text-sm">MVX CONSULTORIA LTDA - CNPJ: 49.867.783/0001-02</p>
+                    </div>
+                    
+                    <div class="mt-4 md:mt-0 text-center md:text-right">
+                        <p class="text-gray-400 text-sm">&copy; 2026 MVX Consultoria. Todos os direitos reservados.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    
     </>
   )
 }
