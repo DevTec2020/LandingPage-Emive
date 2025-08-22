@@ -7,7 +7,7 @@ import Kit from "./assets/Produtos-Emive2.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faArrowRight, faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faArrowRight, faPhone, faBars, faVideo, faLock, faFingerprint } from "@fortawesome/free-solid-svg-icons";
 import { faCircleCheck as farCircleCheck, faStar } from "@fortawesome/free-regular-svg-icons";
 
 function App() {
@@ -73,7 +73,7 @@ function App() {
                     <a href="#protecao" className="hover:text-brand-yellow transition">Proteção</a>
                     <a href="#depoimentos" className="hover:text-brand-yellow transition">Depoimentos</a>
                     <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" 
-                        className="bg-brand-yellow text-primary hover:bg-white py-3 px-5 rounded-full transition duration-300"
+                        className="bg-brand-yellow text-black hover:bg-white py-3 px-5 rounded-full transition duration-300"
                     >
                             <span>Fale conosco</span>
                             <FontAwesomeIcon icon={faArrowRight} className="ml-2"/>
@@ -120,7 +120,7 @@ function App() {
                 </h2>
 
                 <div className="flex flex-col md:flex-row  gap-4">
-                    <a href="#contato" className="bg-brand-yellow hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition duration-300">Solicitar Orçamento</a>
+                    <a href="#contato" className="bg-brand-yellow hover:bg-white text-black font-bold py-3 px-8 rounded-full transition duration-300">Solicitar Orçamento</a>
                     <a href="#contato" className="bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-bold py-3 px-8 rounded-full transition duration-300">Seja Franqueado</a>
                 </div>
             </div>
@@ -133,16 +133,20 @@ function App() {
     {/* Section 2: Proteção (Proposta de valor) */}
     <section id="protecao" className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-brand-yellow mb-12">Nossas Soluções de Proteção</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-center text-brand-yellow mb-12">Nossas Soluções de Proteção</h2>
             
-            <div className="flex flex-col md:flex-row gap-12 mb-16">
+            <div className="flex flex-col md:flex-row gap-40 mb-16">
                 <div className="md:w-1/2">
                     <img src={SuporteImg} 
-                         alt="Nosso Especialista" className="w-full h-full rounded-lg shadow-lg border-4 border-brand-yellow"/>
+                         alt="Nosso Especialista" 
+                         className="w-full h-full rounded-lg shadow-lg border-4 border-brand-yellow"
+                    />
                 </div>
-                <div className="md:w-1/2 font-semibold">
-                    <h3 className="text-2xl font-bold text-brand-yellow mb-6">Segmentos que Atendemos</h3>
-                    <ul className="space-y-4 text-lg">
+
+                <div className="md:w-1/2 font-semibold flex flex-col justify-center items-center text-center md:block md:text-left">
+                    <h3 className="text-3xl font-bold text-brand-yellow mb-6">Segmentos que Atendemos</h3>
+                    
+                    <ul className="space-y-4">
                         <li className="flex items-center">
                             <FontAwesomeIcon icon={farCircleCheck} className="mr-3 mt-1 text-brand-yellow"/>
                             <span>Residências e Condomínios</span>
@@ -160,6 +164,36 @@ function App() {
                             <span>Escritórios Corporativos</span>
                         </li>
                     </ul>
+                    
+                    {/* Cards */}
+                    <div className=" hidden md:flex mt-24">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            {/* Product 1 */}
+                            <div class="bg-brand-yellow p-2 rounded-lg shadow-md border-2 border-accent text-center flex flex-col justify-center">
+                                <div class="text-black mb-3">
+                                    <FontAwesomeIcon icon={faVideo} className="text-4xl text-black"/>
+                                </div>
+                                <h3 class="text-md font-bold text-black mb-2">Sistema de CFTV</h3>
+                            </div>
+                            
+                            {/* Product 2 */}
+                            <div class="bg-brand-yellow p-2 rounded-lg shadow-md border-2 border-accent text-center flex flex-col justify-center">
+                                <div class="text-black mb-4">
+                                    <FontAwesomeIcon icon={faLock} className="text-4xl text-black"/>
+                                </div>
+                                <h3 class="text-xl font-bold text-black mb-3">Alarme Monitorado</h3>
+                            </div>
+                            
+                            {/* Product 3 */}
+                            <div class="bg-brand-yellow p-2 rounded-lg shadow-md border-2 border-accent text-center flex flex-col justify-center">
+                                <div class="text-black mb-4">
+                                    <FontAwesomeIcon icon={faFingerprint} className="text-4xl text-black"/>
+                                </div>
+                                <h3 class="text-xl font-bold text-black mb-3">Controle de Acesso</h3>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
 
@@ -167,7 +201,7 @@ function App() {
             
             <div className="mt-12 text-center">
                 <p className="text-lg max-w-3xl mx-auto mb-8">Nossos sistemas são personalizados para atender às necessidades específicas de cada cliente, garantindo a melhor relação custo-benefício do mercado.</p>
-                <a href="#contato" className="bg-brand-yellow hover:bg-secondary text-black font-bold py-3 px-8 rounded-2xl transition duration-300 inline-block">Faça seu Orçamento</a>
+                <a href="#contato" className="bg-brand-yellow hover:bg-white hover:transition text-black font-bold py-3 px-8 rounded-2xl transition duration-300 inline-block">Faça seu Orçamento</a>
             </div>
         </div>
     </section>
@@ -181,7 +215,7 @@ function App() {
                 {/* Testimonial 1 */}
                 <div className="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
                     <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-primary font-bold text-xl">J</div>
+                        <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold text-xl">J</div>
                         <div className="ml-4">
                             <h4 className="font-bold">João Silva</h4>
                             <p className="text-sm text-gray-300">Dono de Loja</p>
@@ -200,7 +234,7 @@ function App() {
                 {/* Testimonial 2 */}
                 <div className="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
                     <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-primary font-bold text-xl">M</div>
+                        <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold text-xl">M</div>
                         <div className="ml-4">
                             <h4 className="font-bold">Maria Oliveira</h4>
                             <p className="text-sm text-gray-300">Residencial</p>
@@ -219,7 +253,7 @@ function App() {
                 {/* Testimonial 3 */}
                 <div className="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
                     <div className="flex items-center mb-4">
-                        <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-primary font-bold text-xl">C</div>
+                        <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold text-xl">C</div>
                         <div className="ml-4">
                             <h4 className="font-bold">Carlos Souza</h4>
                             <p className="text-sm text-gray-300">Franqueado</p>
@@ -237,7 +271,7 @@ function App() {
             </div>
             
             <div className="mt-12 text-center">
-                <a href="#contato" className="bg-accent hover:bg-yellow-500 text-primary font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Quero Proteção Também</a>
+                <a href="#contato" className="bg-accent hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Quero Proteção Também</a>
             </div>
         </div>
     </section>
@@ -290,7 +324,7 @@ function App() {
                             </div>
                             <div className="text-center">
                                 
-                                <button type="submit" name="franquia" className="bg-brand-yellow hover:bg-yellow-500 text-primary font-bold w-full py-3 px-6 rounded-lg transition duration-300 flex-1">
+                                <button type="submit" name="franquia" className="bg-brand-yellow hover:bg-yellow-500 text-black font-bold w-full py-3 px-6 rounded-lg transition duration-300 flex-1">
                                     Enviar
                                 </button>
                             </div>
