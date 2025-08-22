@@ -7,8 +7,8 @@ import Kit from "./assets/Produtos-Emive2.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faArrowRight, faPhone, faBars, faVideo, faLock, faFingerprint } from "@fortawesome/free-solid-svg-icons";
-import { faCircleCheck as farCircleCheck, faStar } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope, faArrowRight, faPhone, faBars, faVideo, faLock, faFingerprint, faStar, faStarHalfAlt } from "@fortawesome/free-solid-svg-icons";
+import { faCircleCheck as farCircleCheck } from "@fortawesome/free-regular-svg-icons";
 
 function App() {
     const [scroll, setScroll] = useState(false);
@@ -207,77 +207,77 @@ function App() {
     </section>
 
     {/* Section 3: Depoimentos */}
-    <section id="depoimentos" className="py-16 bg-primary text-white">
+    <section id="depoimentos" className="depoimentos-bg py-16 text-white">
         <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">O que nossos clientes dizem</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-center text-brand-yellow mb-12">O que nossos clientes dizem</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Testimonial 1 */}
-                <div className="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
+                <div className="testimonial-card bg-brand-gray-dark rounded-lg p-6 shadow-lg">
                     <div className="flex items-center mb-4">
                         <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold text-xl">J</div>
                         <div className="ml-4">
                             <h4 className="font-bold">João Silva</h4>
-                            <p className="text-sm text-gray-300">Dono de Loja</p>
+                            <p className="text-sm text-brand-gray-light">Dono de Loja</p>
                         </div>
                     </div>
-                    <p className="italic">"Depois de instalar o sistema da SecureTech, me sinto muito mais seguro. O atendimento foi excelente e o sistema funciona perfeitamente."</p>
+                    <p className="italic min-h-18">"Depois de instalar o sistema da Emive, me sinto muito mais seguro. O atendimento com Vinícius foi excelente e o sistema funciona perfeitamente."</p>
                     <div className="mt-4 text-brand-yellow">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
                     </div>
                 </div>
                 
                 {/* Testimonial 2 */}
-                <div className="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
+                <div className="testimonial-card bg-brand-gray-dark rounded-lg p-6 shadow-lg">
                     <div className="flex items-center mb-4">
                         <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold text-xl">M</div>
                         <div className="ml-4">
                             <h4 className="font-bold">Maria Oliveira</h4>
-                            <p className="text-sm text-gray-300">Residencial</p>
+                            <p className="text-sm text-brand-gray-light">Residencial</p>
                         </div>
                     </div>
-                    <p className="italic">"A equipe foi muito atenciosa e explicou tudo sobre o funcionamento. Já recomendei para vários vizinhos e todos estão satisfeitos."</p>
+                    <p className="italic min-h-18">"O Vinícius foi muito atenciosa e explicou tudo sobre o funcionamento. Já recomendei para vários vizinhos e todos estão satisfeitos."</p>
                     <div className="mt-4 text-brand-yellow">
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
-                        <i className="fas fa-star"></i>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
                     </div>
                 </div>
                 
                 {/* Testimonial 3 */}
-                <div className="testimonial-card bg-secondary rounded-lg p-6 shadow-lg">
+                <div className="testimonial-card bg-brand-gray-dark rounded-lg p-6 shadow-lg">
                     <div className="flex items-center mb-4">
                         <div className="w-12 h-12 rounded-full bg-brand-yellow flex items-center justify-center text-black font-bold text-xl">C</div>
                         <div className="ml-4">
                             <h4 className="font-bold">Carlos Souza</h4>
-                            <p className="text-sm text-gray-300">Franqueado</p>
+                            <p className="text-sm text-brand-gray-light">Franqueado</p>
                         </div>
                     </div>
-                    <p className="italic">"Ser franqueado da SecureTech foi a melhor decisão que tomei. O suporte é excelente e os produtos têm qualidade comprovada."</p>
+                    <p className="italic min-h-18">"Ser franqueado da Emive foi a melhor decisão que tomei. O suporte é excelente e os produtos têm qualidade comprovada."</p>
                     <div className="mt-4 text-brand-yellow">
-                        <FontAwesomeIcon ico={faStar} />
-                        <FontAwesomeIcon ico={faStar}/>
-                        <FontAwesomeIcon ico={faStar}/>
-                        <FontAwesomeIcon ico={faStar}/>
-                        <i className="fas fa-star-half-alt"></i>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStar}/>
+                        <FontAwesomeIcon icon={faStarHalfAlt}/>
                     </div>
                 </div>
             </div>
             
             <div className="mt-12 text-center">
-                <a href="#contato" className="bg-accent hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Quero Proteção Também</a>
+                <a href="#contato" className="bg-brand-yellow hover:bg-white hover:transition text-black font-bold py-3 px-8 rounded-2xl transition duration-300 inline-block">Quero Proteção Também</a>
             </div>
         </div>
     </section>
 
     {/* Section 4: Formulário */}
-    <section id="contato" className="py-16 bg-gray-100">
+    <section id="contato" className="py-16 bg-black/90">
         <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="md:flex">
@@ -336,7 +336,7 @@ function App() {
     </section>
 
     {/* Footer */}
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-black/90 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="md:flex md:justify-between">
                 <div class="mb-6 md:mb-0">
