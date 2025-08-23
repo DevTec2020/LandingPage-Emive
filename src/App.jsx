@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react";
 import emailjs from "@emailjs/browser"
 
+import Vinivius from "./assets/Vinicius.jpg"
 import LogoEmive from "./assets/LogoEmive.png"
 import SuporteImg from "./assets/Suporte.png"
 import Kit from "./assets/Produtos-Emive2.png"
@@ -77,11 +78,11 @@ function App() {
     <>
     {/* WhatsApp Float Button */}
     <div className="floating-whatsapp">
-        <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" 
-           className="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg flex items-center justify-center"
-           target="_blank">
-            <FontAwesomeIcon icon={faWhatsapp} className="text-2xl"/>
-        </a>
+        <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança"
+            className="hidden sm:fixed sm:bottom-6 sm:right-6 sm:flex sm:bg-green-500 text-white w-14 h-14 rounded-full items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition animate-bounce delay-100"
+            target="_blank">
+            <FontAwesomeIcon icon={faWhatsapp} className="text-4xl"/>
+        </a>   
     </div>
 
     {/* Top Bar */}
@@ -437,15 +438,17 @@ function App() {
             <div className="md:flex md:justify-between">
                 <div className="mb-6 md:mb-0">
                     <div className="flex items-center mb-4">
-                        <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center mr-3">
-                            <i className="fas fa-shield-alt text-gray-900 text-lg"></i>
+                        <img src={Vinivius} alt="Img Vinicius" className="w-10 h-10 md:h-50 md:w-50 rounded-full border-4 border-brand-yellow mr-3" />
+                        <div className="flex flex-col ">
+                            <span className="text-xl font-bold text-brand-gray-dark">MVX CONSULTORIA</span>
+                            <span className="text-4xl font-bold">Vinicius Hafner</span>
+                            <span className="text-md font-bold text-brand-yellow">Franqueado Especialista em Segurança</span>
                         </div>
-                        <span className="text-xl font-bold">MVX CONSULTORIA</span>
                     </div>
                     <p className="text-gray-400 max-w-xs">Soluções completas em segurança eletrônica para residências e comércios.</p>
                 </div>
                 
-                <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
                     <div>
                         <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Links</h3>
                         <ul className="space-y-2">
