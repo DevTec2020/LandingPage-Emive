@@ -8,61 +8,47 @@ export default function Footer(){
     return(
     <footer className="bg-black/95 text-white py-8">
         <div className="container mx-auto px-4">
-            <div className="md:flex md:justify-between">
+            <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="mb-6 md:mb-0">
-                    <div className="flex items-center mb-4">
-                        <img src={Vinivius} alt="Img Vinicius" className="w-10 h-10 md:h-50 md:w-50 rounded-full border-4 border-brand-yellow mr-3" />
-                        <div className="flex flex-col ">
-                            <span className="text-xl font-bold text-brand-gray-dark">MVX CONSULTORIA</span>
+                    <div className="flex flex-col items-center mb-4 text-center">
+                        <img src={Vinivius} alt="Img Vinicius" className="w-52 h-52 md:h-58 md:w-58 rounded-full border-4 border-brand-yellow" />
+                        <div className="flex flex-col text-center mt-3">
+                            <span className="text-xl font-bold text-brand-gray-light">MVX CONSULTORIA</span>
                             <span className="text-4xl font-bold">Vinicius Hafner</span>
-                            <span className="text-md font-bold text-brand-yellow">Franqueado Especialista em Segurança</span>
+                            <span className="text-2xl font-semibold text-brand-yellow max-w-xl">Franqueado Especialista <p>em Segurança</p></span>
+                            <div className="flex justify-center space-x-3 mt-3">
+                                <a href="#contato" className="text-gray-400 hover:text-white transition">
+                                    <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
+                                </a>
+                                <a href="https://www.instagram.com/viniciushafner.franqueado" target="_blank" className="text-gray-400 hover:text-white transition">
+                                    <FontAwesomeIcon icon={faInstagram} className="text-xl" />
+                                </a>
+                                <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" 
+                                    className="text-gray-400 hover:text-white transition">
+                                    <FontAwesomeIcon icon={faWhatsapp} className="text-xl" />
+                                </a>
+                                <a href="https://www.linkedin.com/in/vinicius-hafner-segurancaeletronica" target="_blank" className="text-gray-400 hover:text-white transition">
+                                    <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
+                                </a>
+                            </div>
                         </div>
+                        
                     </div>
-                    <p className="text-gray-400 max-w-xs">Soluções completas em segurança eletrônica para residências e comércios.</p>
+                </div>
+
+                <div className="flex flex-col justify-center items-center max-w-2xl space-y-12 md:space-y-20">
+                    <h1 className="text-center text-3xl md:text-start md:text-5xl font-semibold">
+                        AGENDE AGORA SUA <span className="text-brand-yellow">CONSULTORIA GRATUITA PRESENCIAL OU POR VIDEOCONFERÊNCIA</span> COM O FRANQUEADO.
+                    </h1>
+                    <div className="w-full flex md:justify-start justify-center">
+                        <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" 
+                            className="bg-black/80 text-white border-2 border-brand-yellow hover:bg-brand-yellow hover:border-black hover:text-black hover:shadow-lg/50 hover:shadow-brand-yellow  py-5 px-14 rounded-full transition duration-700">
+                                <span className="font-bold">Faça seu Orçamento</span>
+                        </a>
+                    </div>
                 </div>
                 
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-                    <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Links</h3>
-                        <ul className="space-y-2">
-                            <li><a href="#home" className="text-gray-400 hover:text-white transition">Início</a></li>
-                            <li><a href="#protecao" className="text-gray-400 hover:text-white transition">Proteção</a></li>
-                            <li><a href="#depoimentos" className="text-gray-400 hover:text-white transition">Depoimentos</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Contato</h3>
-                        <ul className="space-y-2">
-                            <li className="flex items-center">
-                                <FontAwesomeIcon icon={faPhone} className="mr-2 text-sm text-brand-yellow" />
-                                <span className="text-gray-400">(21) 96740-6645</span>
-                            </li>
-                            <li className="flex items-center">
-                                <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-sm text-brand-yellow" />
-                                <span className="text-gray-400">vinicius.hafner@mvxconsultoria.com.br</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 className="text-sm font-semibold uppercase tracking-wider mb-4">Redes Sociais</h3>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-white transition">
-                                <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition">
-                                <FontAwesomeIcon icon={faInstagram} className="text-xl" />
-                            </a>
-                            <a href="https://wa.me/5521967406645" target="_blank" className="text-gray-400 hover:text-white transition">
-                                <FontAwesomeIcon icon={faWhatsapp} className="text-xl" />
-                            </a>
-                            <a href="#" className="text-gray-400 hover:text-white transition">
-                                <FontAwesomeIcon icon={faLinkedin} className="text-xl" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             
             <div className="mt-8 pt-8 border-t border-gray-800">
