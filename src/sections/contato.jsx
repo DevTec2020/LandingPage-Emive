@@ -1,16 +1,38 @@
 import { useState, useEffect} from "react";
 import emailjs from "@emailjs/browser"
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faVideo, faBell, faEye } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt, faPhoneAlt, faEnvelope, faClock} from '@fortawesome/free-solid-svg-icons'
+import { faLinkedinIn, faInstagram, faFacebookF, faYoutube} from '@fortawesome/free-brands-svg-icons'
 
-export default function Contato(){
+export default function Contato() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [perfil, setPerfil] = useState("");
     const [message, setMessage] = useState("");
+
+    const formatPhone = (value) => {
+        if (!value) return "";
+
+        // remove tudo que não for número
+        value = value.replace(/\D/g, "");
+        
+        // limita no máximo 11 dígitos
+        if (value.length > 11) value = value.slice(0, 11);
+
+        if (value.length <= 2) {
+            return `(${value}`;
+        } else if (value.length <= 6) {
+            return value.replace(/^(\d{2})(\d+)/, "($1) $2");
+        } else if (value.length <= 10) {
+            return value.replace(/^(\d{2})(\d{4})(\d+)/, "($1) $2-$3");
+        } else {
+            return value.replace(/^(\d{2})(\d{5})(\d{4}).*/, "($1) $2-$3");
+        }
+    };
 
 
     const sendEmail = (e) => {
@@ -35,17 +57,25 @@ export default function Contato(){
             templateParams,
             "22s_EbuM_em6dITRv" // chave pública do EmailJS
         )
-        .then((response) => {
-            console.log("Email enviado:", response);
-            console.log(templateParams)
-            
+        .then((response) => {            
             setName("")
             setEmail("")
             setPhone("")
             setPerfil("")
             setMessage("")
             
-            alert("Email enviado com sucesso!");
+            toast.success("Email enviado com sucesso!", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+
+            
 
 
         }, (error) => {
@@ -55,114 +85,135 @@ export default function Contato(){
         
     };
 
-    
-    return(
-        <>
-        {/* Section 4: Formulário */}
-        <section id="contato" className="py-16 bg-brand-gray-dark">
+    return (
+        <section id="contato" className="py-16 bg-brand-gray-light">
             <div className="container mx-auto px-4">
-                <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div className="md:flex">
-                        <div className="md:w-1/2 primary-bg text-white p-8 md:p-12 flex flex-col justify-center">
-                            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-yellow text-center">Sua tranquilidade em primeiro lugar.</h2>
-                        
-                            <div className="flex flex-col items-center justify-center space-y-4 mt-24 text-xl">
-                                <div className="flex items-center">
-                                    <FontAwesomeIcon icon={faVideo} className="mr-2 text-brand-yellow" />
-                                    <span>Câmeras de Segurança</span>
-                                </div>
-                                <div className="flex items-center">
-                                    <FontAwesomeIcon icon={faBell} className="mr-2 text-brand-yellow" />
-                                    <span>Alarme Monitorado</span>
-                                </div>
-                                <div className="flex items-center">
-                                    <FontAwesomeIcon icon={faEye} className="mr-2 text-brand-yellow" />
-                                    <span>Monitoramento 24H</span>
-                                </div>
-                                
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-bold text-center text-black mb-12">Entre em Contato</h2>
+                </div>
+                
+                <div className="flex flex-col lg:flex-row gap-12">
+                    <div className="lg:w-1/2 ">
+                        <form onSubmit={sendEmail} className="bg-white p-8 rounded-xl shadow-md">
+                            <div className="mb-6">
+                                <label className="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                                <input 
+                                    type="text" 
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                                    onChange={(e) => setName(e.target.value)}
+                                    value={name}
+                                    required
+                                />
                             </div>
-                            <div className="flex justify-center space-x-3 me-5 mt-24">
-                                <a href="https://www.instagram.com/viniciushafner.franqueado" target="_blank" className="text-gray-400 hover:text-white text-xl transition">
-                                    <FontAwesomeIcon icon={faInstagram} className="text-4xl" />
-                                </a>
-                                <a href="https://www.linkedin.com/in/vinicius-hafner-segurancaeletronica" target="_blank" className="text-gray-400 hover:text-white text-xl transition">
-                                    <FontAwesomeIcon icon={faLinkedin} className="text-4xl" />
-                                </a>
-                                <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" className="text-gray-400 hover:text-white text-xl transition">
-                                    <FontAwesomeIcon icon={faWhatsapp} className="text-4xl" />
-                                </a>
+                            
+                            <div className="mb-6">
+                                <label className="block text-gray-700 font-medium mb-2">E-mail</label>
+                                <input 
+                                    type="email" 
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
+                                    required
+                                />
                             </div>
-                        </div>
-
-                        <div className="md:w-1/2 p-8 md:p-12">
-                            <form onSubmit={sendEmail} className="space-y-4">
-                                <div>
-                                    <label className="block text-gray-700 font-medium mb-2">Nome Completo</label>
-                                    <input 
-                                        type="text" 
-                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" 
-                                        onChange={(e) => setName(e.target.value)}
-                                        value={name}
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-gray-700 font-medium mb-2">E-mail</label>
-                                    <input 
-                                        type="email" 
-                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" 
-                                        onChange={(e) => setEmail(e.target.value)}
-                                        value={email}
-                                        required
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block text-gray-700 font-medium mb-2">Telefone</label>
-                                    <input 
-                                        type="tel" 
-                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" 
-                                        onChange={(e) => setPhone(e.target.value)}
-                                        value={phone}
-                                        required/>
-                                </div>
-                                <div>
+                            
+                            <div className="mb-6">
+                                <label className="block text-gray-700 font-medium mb-2">Telefone</label>
+                                <input 
+                                    type="tel" 
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                                    onChange={(e) => setPhone(formatPhone(e.target.value))}
+                                    value={phone}
+                                    required    
+                                />
+                            </div>
+                            <div className="mb-6">
                                     <label className="block text-gray-700 font-medium mb-2">Interessado em:</label>
                                     <select  
-                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" 
+                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow" 
                                         onChange={(e) => setPerfil(e.target.value)}
                                         value={perfil}
                                         required>
                                         
                                         <option value="" disabled>Selecione uma opção</option>
-                                        <option value="Proteção Residencial">Proteção Residencial</option>
+                                        <option value="Proteção Residencial" className="hover:text-brand-yellow">Proteção Residencial</option>
                                         <option value="Proteção Comercial">Proteção Comercial</option>
                                         <option value="Franquia">Franquia</option>
                                     </select>
                                 </div>
+                            
+                            <div className="mb-6">
+                                <label className="block text-gray-700 font-medium mb-2">Mensagem</label>
+                                <textarea 
+                                    rows={4} 
+                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-yellow"
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    value={message}
+                                    required
+                                />
+                            </div>
+                            
+                            <button type="submit" className="w-full bg-brand-yellow border-2 text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-black hover:border-2 hover:border-black transition duration-300 cursor-pointer">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                    
+                    <div className="lg:w-1/2 animate__animated animate__fadeInRight">
+                        <div className="bg-white p-8 rounded-xl shadow-md h-full">
+                            <h3 className="text-xl font-bold text-black mb-6">Nossas Informações</h3>
+                            
+                            
+                            
+                            <div className="flex items-start mb-8">
+                                <div className="bg-brand-yellow p-3 rounded-lg mr-4 text-black">
+                                    <FontAwesomeIcon icon={faPhoneAlt} className="text-xl" />
+                                </div>
                                 <div>
-                                    <label className="block text-gray-700 font-medium mb-2">Mensagem</label>
-                                    <textarea 
-                                        rows="3" 
-                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                                        onChange={(e) => setMessage(e.target.value)}
-                                        value={message}
-                                        required
-                                    />
+                                    <h4 className="font-bold text-gray-800">Telefone</h4>
+                                    <p className="text-gray-600">(21) 96740-6645 (WhatsApp)</p>
                                 </div>
-                                <div className="text-center">
-                                    
-                                    <button 
-                                        type="submit" 
-                                        className="bg-brand-yellow hover:bg-yellow-500 text-black font-bold w-full py-3 px-6 rounded-lg transition duration-300 flex-1 cursor-pointer">
-                                        Enviar
-                                    </button>
+                            </div>
+                            
+                            <div className="flex items-start mb-8">
+                                <div className="bg-brand-yellow p-3 rounded-lg mr-4 text-black">
+                                    <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
                                 </div>
-                            </form>
+                                <div>
+                                    <h4 className="font-bold text-gray-800">E-mail</h4>
+                                    <p className="text-gray-600">vinicius.hafner@mvxconsultoria.com.br</p>
+                                </div>
+                            </div>
+                            
+                            <div className="flex items-start">
+                                <div className="bg-brand-yellow p-3 rounded-lg mr-4 text-black">
+                                    <FontAwesomeIcon icon={faClock} className="text-xl" />
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-gray-800">Horário de Atendimento</h4>
+                                    <p className="text-gray-600">Segunda à Sexta: 6h às 22h</p><p></p>
+                                </div>
+                            </div>
+                            
+                            <div className="mt-12">
+                                <h4 className="font-bold text-gray-800 mb-4">Siga-nos</h4>
+                                <div className="flex space-x-4">
+                                    <a href="https://www.linkedin.com/in/vinicius-hafner-segurancaeletronica" target='_blank' className="w-10 h-10 bg-brand-yellow/70 rounded-full flex items-center justify-center text-brand-gray-dark hover:bg-brand-yellow transition">
+                                        <FontAwesomeIcon icon={faLinkedinIn} />
+                                    </a>
+                                    <a href="https://www.instagram.com/viniciushafner.franqueado" target='_blank' className="w-10 h-10 bg-brand-yellow/70 rounded-full flex items-center justify-center text-brand-gray-dark hover:bg-brand-yellow transition">
+                                        <FontAwesomeIcon icon={faInstagram} />
+                                    </a>
+                                    <a href="#" target='_blank' className="w-10 h-10 bg-brand-yellow/70 rounded-full flex items-center justify-center text-brand-gray-dark hover:bg-brand-yellow transition">
+                                        <FontAwesomeIcon icon={faFacebookF} />
+                                    </a>
+                                    <a href="#" target='_blank' className="w-10 h-10 bg-brand-yellow/70 rounded-full flex items-center justify-center text-brand-gray-dark hover:bg-brand-yellow transition">
+                                        <FontAwesomeIcon icon={faYoutube} />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        </>
     )
 }
