@@ -196,7 +196,7 @@ export default function Contato() {
                             <div className="mt-12">
                                 <h4 className="font-bold text-gray-800 mb-4">Siga-nos</h4>
                                 <div className="flex space-x-4">
-                                    <a href="https://www.linkedin.com/in/vinicius-hafner-segurancaeletronica" target='_blank' className="w-10 h-10 bg-brand-yellow/70 rounded-full flex items-center justify-center text-brand-gray-dark hover:bg-brand-yellow transition">
+                                    <a href="https://www.linkedin.com/in/vinicius-hafner-segurancaeletronica/" target='_blank' className="w-10 h-10 bg-brand-yellow/70 rounded-full flex items-center justify-center text-brand-gray-dark hover:bg-brand-yellow transition">
                                         <FontAwesomeIcon icon={faLinkedinIn} />
                                     </a>
                                     <a href="https://www.instagram.com/viniciushafner.franqueado" target='_blank' className="w-10 h-10 bg-brand-yellow/70 rounded-full flex items-center justify-center text-brand-gray-dark hover:bg-brand-yellow transition">
