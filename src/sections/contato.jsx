@@ -179,7 +179,7 @@ export default function Contato() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-gray-800">E-mail</h4>
-                                    <p className="text-gray-600">vinicius.hafner@mvxconsultoria.com.br</p>
+                                    <p className="text-gray-600">contato@mvxconsultoria.com.br</p>
                                 </div>
                             </div>
                             
