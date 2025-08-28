@@ -29,10 +29,10 @@ export default function Protecao(){
                             <h3 className="text-3xl md:text-5xl font-semibold">
                             Alta tecnologia para segurança pessoal e patrimonial.
                             </h3>
-                            <p className="text-2xl md:text-3xl font-normal">
+                            <p className="text-2xl md:text-3xl font-normal max-w-4/5">
                             Instalação rápida em 28 minutos, sem obras e sem sujeira.
                             </p>
-                            <a href="#contato" className="bg-brand-yellow hover:bg-white hover:transition text-black font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                            <a href="#contato" className="bg-brand-yellow hover:bg-black hover:transition text-black hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
                             Faça seu Orçamento
                             </a>
                         </div>
@@ -56,8 +56,8 @@ export default function Protecao(){
                         
 
                     <div className="mt-12 text-center">
-                        <p className="text-lg max-w-3xl mx-auto mb-8">Nossos sistemas são personalizados para atender às necessidades específicas de cada cliente, garantindo a melhor relação custo-benefício do mercado.</p>
-                        <a href="#contato" className="bg-brand-yellow hover:bg-white hover:transition text-black font-bold py-3 px-8 rounded-2xl transition duration-300 inline-block">Faça seu Orçamento</a>
+                        <p className="text-lg md:text-xl font-semibold max-w-3xl mx-auto mb-8">Nossos sistemas são personalizados para atender às necessidades específicas de cada cliente, garantindo a melhor relação custo-benefício do mercado.</p>
+                        <a href="#contato" className="bg-brand-yellow hover:bg-black hover:transition text-black hover:text-white font-bold py-3 px-8 rounded-2xl transition duration-300 inline-block">Faça seu Orçamento</a>
                     </div>
                 </div>
             </section>
