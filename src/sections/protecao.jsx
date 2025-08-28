@@ -25,8 +25,8 @@ export default function Protecao(){
                         </div>
 
                         {/* Coluna do texto */}
-                        <div className="flex flex-col justify-center items-center md:items-start md:text-left font-semibold max-w-xl gap-6">
-                            <h3 className="text-3xl md:text-5xl font-semibold">
+                        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left font-semibold max-w-xl gap-6">
+                            <h3 className="text-3xl md:text-5xl mt-7">
                             Alta tecnologia para segurança pessoal e patrimonial.
                             </h3>
                             <p className="text-2xl md:text-3xl font-normal max-w-4/5">
@@ -40,8 +40,8 @@ export default function Protecao(){
    
                     
                     {/* Cards */}
-                    <div className="hidden md:flex mt-15 justify-center">
-                        <div className="grid md:grid-cols-4 gap-8">
+                    <div className="md:flex mt-15 justify-center">
+                        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-items-center">
                             <CardSolucao icone={faEye} text="Patrimônio monitorado 24H"/>
                             <CardSolucao icone={faCircle} text="Botão de pânico para emergências"/>
                             <CardSolucao icone={faPeopleGroup} text="Gestão fluxo de pessoas e equipe"/>
