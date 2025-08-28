@@ -177,11 +177,17 @@ export default function Contato() {
                                 <div className="bg-brand-yellow p-3 rounded-lg mr-4 text-black">
                                     <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
                                 </div>
-                                <div>
+                                <div className="w-0 flex-1"> {/* garante que o conteúdo respeite o container */}
                                     <h4 className="font-bold text-gray-800">E-mail</h4>
-                                    <p className="text-gray-600">contato@mvxconsultoria.com.br</p>
+                                    <a 
+                                    href="mailto:Marcus.hafner@emivefranquia.com.br" 
+                                    className="text-gray-600 break-all hover:underline"
+                                    >
+                                    Marcus.hafner@emivefranquia.com.br
+                                    </a>
                                 </div>
                             </div>
+
                             
                             <div className="flex items-start">
                                 <div className="bg-brand-yellow p-3 rounded-lg mr-4 text-black">
