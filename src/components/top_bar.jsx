@@ -13,9 +13,9 @@ export default function top_bar(){
                     <span>(21) 96740-6645</span>
                 </a>
 
-                <a href="mailto:teste@teste.com" className="text-gray-400 hover:text-white flex items-center">
+                <a href="mailto:Marcus.hafner@emivefranquia.com.br" className="text-gray-400 hover:text-white flex items-center">
                     <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-xl" />
-                    <span>vinicius.hafner@mvxconsultoria.com.br</span>
+                    <span>Marcus.hafner@emivefranquia.com.br</span>
                 </a>
             </div>
 
