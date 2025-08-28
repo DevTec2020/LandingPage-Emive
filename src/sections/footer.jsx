@@ -38,7 +38,7 @@ export default function Footer(){
 
                 <div className="flex flex-col justify-center items-center max-w-2xl space-y-12 md:space-y-20">
                     <h1 className="text-center text-3xl md:text-start md:text-5xl font-semibold">
-                        AGENDE AGORA SUA <span className="text-brand-yellow">CONSULTORIA GRATUITA PRESENCIAL OU POR VIDEOCONFERÊNCIA</span> COM O FRANQUEADO.
+                        AGENDE AGORA SUA <span className="text-brand-yellow">CONSULTORIA GRATUITA COM O ESPECIALISTA EM SEGURANÇA</span> E PROTEJA QUEM MAIS IMPORTA.
                     </h1>
                     <div className="w-full flex md:justify-start justify-center">
                         <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" 
