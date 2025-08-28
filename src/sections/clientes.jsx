@@ -19,7 +19,7 @@ export default function Clientes(){
                                     <p className="text-sm text-brand-gray-light">Dono de Loja</p>
                                 </div>
                             </div>
-                            <p className="italic min-h-18">"Depois de instalar o sistema da Emive, me sinto muito mais seguro. O atendimento com Vinícius foi excelente e o sistema funciona perfeitamente."</p>
+                            <p className="italic min-h-18">"Depois de instalar o sistema da Emive, me sinto muito mais seguro. O atendimento com Vinicius foi excelente e o sistema funciona perfeitamente."</p>
                             <div className="mt-4 text-brand-yellow">
                                 <FontAwesomeIcon icon={faStar}/>
                                 <FontAwesomeIcon icon={faStar}/>
@@ -38,7 +38,7 @@ export default function Clientes(){
                                     <p className="text-sm text-brand-gray-light">Residencial</p>
                                 </div>
                             </div>
-                            <p className="italic min-h-18">"O Vinícius foi muito atenciosa e explicou tudo sobre o funcionamento. Já recomendei para vários vizinhos e todos estão satisfeitos."</p>
+                            <p className="italic min-h-18">"O Vinicius foi muito atencioso e explicou tudo sobre o funcionamento. Já recomendei para vários vizinhos e todos estão satisfeitos."</p>
                             <div className="mt-4 text-brand-yellow">
                                 <FontAwesomeIcon icon={faStar}/>
                                 <FontAwesomeIcon icon={faStar}/>
