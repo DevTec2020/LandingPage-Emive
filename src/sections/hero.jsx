@@ -14,7 +14,10 @@ export default function hero(){
         
                         <div className="flex flex-col md:flex-row mt-10 md:mt-20 gap-4">
                             <a href="#contato" className="bg-brand-yellow hover:bg-white text-black font-bold py-3 px-8 rounded-full transition duration-300">Solicitar Orçamento</a>
-                            <a href="#contato" className="bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-bold py-3 px-8 rounded-full transition duration-300">Seja Franqueado</a>
+                            <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20ser%20franqueado%20da%20Emive" target="_blank" 
+                                className="bg-transparent hover:bg-white hover:text-black border-2 border-white text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                                    Seja Franqueado
+                            </a>
                         </div>
                     </div>
                     <div className="md:w-1/2 mt-10 md:mt-0">
