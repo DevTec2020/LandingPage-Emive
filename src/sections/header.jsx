@@ -37,6 +37,7 @@ export default function(){
                         <a href="#home" className="hover:text-brand-yellow transition">Início</a>
                         <a href="#protecao" className="hover:text-brand-yellow transition">Proteção</a>
                         <a href="#depoimentos" className="hover:text-brand-yellow transition">Depoimentos</a>
+                        <a href="#contato" className="hover:text-brand-yellow transition">Contato</a>
                         <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" target="_blank" 
                             className="bg-brand-yellow text-black hover:bg-white py-3 px-5 rounded-full transition duration-300"
                         >
@@ -58,6 +59,7 @@ export default function(){
                     <a href="#home" onClick={() => setIsOpen(!isOpen)} className="block hover:text-brand-yellow transition">Início</a>
                     <a href="#protecao" onClick={() => setIsOpen(!isOpen)} className="block hover:text-brand-yellow transition">Proteção</a>
                     <a href="#depoimentos" onClick={() => setIsOpen(!isOpen)} className="block hover:text-brand-yellow transition">Depoimentos</a>
+                    <a href="#contato" onClick={() => setIsOpen(!isOpen)} className="block hover:text-brand-yellow transition">Contato</a>
                     <a href="https://wa.me/5521967406645?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20de%20segurança" 
                         target="_blank" onClick={() => setIsOpen(!isOpen)} 
                         className="bg-brand-yellow text-black hover:bg-white py-3 px-5 rounded-full transition duration-300 inline-block">
