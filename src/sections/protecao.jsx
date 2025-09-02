@@ -1,5 +1,18 @@
-import SuporteImg from "../assets/Suporte.png"
 import CardSolucao from "../components/card_solucao.jsx";
+import CardProduto from "../components/card_produto.jsx"
+
+//PRODUTOS
+import ProdApp from "../assets/Produtos/APP.webp";
+import ProdAlarme from "../assets/Produtos/ALARME.JPG";
+import ProdCamera from "../assets/Produtos/CAMERA.JPG";
+import ProdControle from "../assets/Produtos/CONTROLE.JPG";
+import ProdMagnetico from "../assets/Produtos/SENSOR_MAGNETICO.JPG";
+import ProdPresenca from "../assets/Produtos/SENSOR_PRESENCA.JPG";
+import ProdSirene from "../assets/Produtos/SIRENE.JPG";
+
+
+import SuporteImg from "../assets/Suporte.png"
+import MaletaImg from "../assets/Maleta.png"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVideo, faLock, faFingerprint, faEye, faCircle, faPeopleGroup, faShield, faClock, faMobile } from "@fortawesome/free-solid-svg-icons";
@@ -54,10 +67,38 @@ export default function Protecao(){
                         
                     </div>
                         
+                    {/* APRESENTAÇÃO KIT */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start justify-items-center p-6 mt-24">
+                    
+                        {/* Coluna da maleta */}
+                        <div className="flex flex-col items-center text-center md:text-left">
+                            <h2 className="text-2xl md:text-3xl font-bold text-brand-gray max-w-md">
+                            NOSSO KIT SMART PRONTO PARA USO ESTÁ PREPARADO PARA TE PROTEGER DE TODAS AS MANEIRAS
+                            </h2>
+                            <img 
+                            src={MaletaImg} 
+                            className="h-72 md:h-96 mt-8 object-contain" 
+                            alt="Maleta Kit" 
+                            />
+                        </div>
 
-                    <div className="mt-12 text-center">
-                        <p className="text-lg md:text-xl font-semibold max-w-3xl mx-auto mb-8">Nossos sistemas são personalizados para atender às necessidades específicas de cada cliente, garantindo a melhor relação custo-benefício do mercado.</p>
-                        <a href="#contato" className="bg-brand-yellow hover:bg-black hover:transition text-black hover:text-white font-bold py-3 px-8 rounded-2xl transition duration-300 inline-block">Faça seu Orçamento</a>
+                        {/* Coluna dos produtos */}
+                        <div className="w-full max-w-lg">
+                            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 max-h-[650px] overflow-y-auto pr-2">
+                                <CardProduto prod={ProdApp} title="APLICATIVO" desk="MAIS SEGURA COM REDUNDÂNCIA."/>
+                                <CardProduto prod={ProdAlarme} title="CENTRAL DE ALARME" desk="MAIS SEGURA COM REDUNDÂNCIA."/>
+                                <CardProduto prod={ProdCamera} title="CÂMERA DE SEGURANÇA" desk="MAIS SEGURA COM REDUNDÂNCIA."/>
+                                <CardProduto prod={ProdControle} title="CONTROLE REMOTO" desk="MAIS SEGURA COM REDUNDÂNCIA."/>
+                                <CardProduto prod={ProdMagnetico} title="SENSOR MAGNÉTICO" desk="MAIS SEGURA COM REDUNDÂNCIA."/>
+                                <CardProduto prod={ProdPresenca} title="SENSOR DE PRESENÇA" desk="MAIS SEGURA COM REDUNDÂNCIA."/>
+                                <CardProduto prod={ProdSirene} title="SIRENE DE ALTA POTÊNCIA" desk="MAIS SEGURA COM REDUNDÂNCIA."/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div className="text-center">
+                     <p className="text-xl md:text-3xl mt-12 text-center font-semibold max-w-3xl mx-auto mb-8">Nossos sistemas são personalizados para atender às necessidades específicas de cada cliente, garantindo a melhor relação custo-benefício do mercado.</p>
+                     <a href="#contato" className="bg-brand-yellow hover:bg-black hover:transition text-black hover:text-white font-bold py-3 px-8 rounded-2xl transition duration-300 inline-block">Faça seu Orçamento</a>
                     </div>
                 </div>
             </section>
