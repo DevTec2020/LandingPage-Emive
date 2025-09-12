@@ -71,7 +71,6 @@ export default function Contato() {
                 closeOnClick: true,
                 pauseOnHover: true,
                 draggable: true,
-                progress: undefined,
                 theme: "dark",
             });
 
@@ -80,7 +79,15 @@ export default function Contato() {
 
         }, (error) => {
             console.log("Erro:", error);
-            alert("Erro ao enviar email. Por favor, tente novamente.");
+            toast.error("Erro ao enviar email. Por favor, tente novamente.", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                theme: "dark",
+            });
         });
         
     };
